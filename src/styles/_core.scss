@@ -3,13 +3,59 @@ body, html {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Oxygen', 'Roboto', 'Helvetica', 'Arial', sans-serif;
   color: #404040;
-  line-height: 1.4em;
+  line-height: 1.5em;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  margin: 0 0 1rem;
+  margin: 0 0 1.4rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 0 0 1.4rem;
+}
+
+.container {
+  width: 840px;
+  margin: 0 auto;
+}
+
+.container__text {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.section-divider {
+  height: 2px;
+  background-color: #c3c3c3;
+  width: 850px;
+  margin: 80px auto;
+  position: relative;
+
+  &::before, &::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    background-color: #c3c3c3;
+    position: absolute;
+    display: block;
+    top: -4px;
+  }
+
+  &::before {
+    left: -4px;
+  }
+
+  &::after {
+    right: -4px;
+  }
 }
